@@ -1,0 +1,21 @@
+package com.example.relationship.manytomany.dbconnection;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.sql.SQLException;
+
+/**
+ * Created by aman on 3/30/17.
+ */
+public class JpaConfiguration {
+    private static EntityManagerFactory emfactory = Persistence.
+            createEntityManagerFactory("jpa-example");
+
+
+    public EntityManager getEnitityManager() {
+
+        return emfactory.createEntityManager();
+    }
+
+}
